@@ -133,12 +133,21 @@ ex) 100/2 = 50
 
 ```
 @keyframes slidePanoramaFirst{
+  from{}
+  50%{transform:translateX(-100%); opacity:1;}
+  50.1%{transform:translateX(100%); opacity:0;}
+  50.2%{transform:translateX(100%); opacity:1;}
+  99.9%{transform:translateX(0); opacity:1;}
+  to{transform:translateX(0); opacity:1;}
+}
+
+@keyframes slidePanoramaLast{
   from{transform:translateX(0); opacity:1;}
-	50%{transform:translateX(-100%); opacity:1;}
-	50.1%{transform:translateX(100%); opacity:0;}
-	50.2%{transform:translateX(100%); opacity:1;}
-	99.9%{transform:translateX(0); opacity:1;}
-	to{transform:translateX(0); opacity:1;}
+  50%{transform:translateX(-100%); opacity:1;}
+  50.1%{transform:translateX(100%); opacity:0;}
+  50.2%{transform:translateX(100%); opacity:1;}
+  99.9%{transform:translateX(0); opacity:1;}
+  to{transform:translateX(0); opacity:1;}
 }
 ```
 
