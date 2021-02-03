@@ -127,27 +127,20 @@
 keyframes 만든다
 list가 두개이므로 from과 to를 제외하고 중간 타임라인은 1개만 둔다.
 list가 더 있다? 그럼 더 있는 만큼 추가한다. 100 / n 의 값만큼 중간 타임라인을 만든다. 
-ex) 100/2 = 50
+ex) 100/4 = 25  -> 이럴경우 중간타임라인이 25, 50, 75 이다
 
-ㄴ 그러므로 중간 타임라인 50%이다.
 
 ```
 @keyframes slidePanoramaFirst{
   from{}
-  50%{transform:translateX(-100%); opacity:1;}
-  50.1%{transform:translateX(100%); opacity:0;}
-  50.2%{transform:translateX(100%); opacity:1;}
-  99.9%{transform:translateX(0); opacity:1;}
-  to{transform:translateX(0); opacity:1;}
+  50%{}
+  to{}
 }
 
 @keyframes slidePanoramaLast{
-  from{transform:translateX(0); opacity:1;}
-  50%{transform:translateX(-100%); opacity:1;}
-  50.1%{transform:translateX(100%); opacity:0;}
-  50.2%{transform:translateX(100%); opacity:1;}
-  99.9%{transform:translateX(0); opacity:1;}
-  to{transform:translateX(0); opacity:1;}
+  from{}
+  50%{}
+  to{}
 }
 ```
 
