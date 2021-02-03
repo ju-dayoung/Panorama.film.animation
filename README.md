@@ -127,8 +127,10 @@
 keyframes 만든다
 list가 두개이므로 from과 to를 제외하고 중간 타임라인은 1개만 둔다.
 list가 더 있다? 그럼 더 있는 만큼 추가한다. 100 / n 의 값만큼 중간 타임라인을 만든다. 
-ex) 100/4 = 25  -> 이럴경우 중간타임라인이 25, 50, 75 이다
+ex) 100/4 = 25  -> 이럴경우 중간타임라인이 25%, 50%, 75% 이다
 
+
+이 경우에는 2개이므로 
 
 ```
 @keyframes slidePanoramaFirst{
@@ -144,6 +146,22 @@ ex) 100/4 = 25  -> 이럴경우 중간타임라인이 25, 50, 75 이다
 }
 ```
 
+x좌표를 따라 움직이므로 transform:transLateX(); 사용
+중간타임라인에 따라 -100%씩 움직임 
+
+```
+@keyframes slidePanoramaFirst{
+  from{transform:transLateX(0);}
+  50%{transform:transLateX(-100%);}
+  to{transform:transLateX(0);}
+}
+
+@keyframes slidePanoramaLast{
+  from{transform:transLateX(0);}
+  50%{transform:transLateX(-100%);}
+  to{transform:transLateX(-200%);}
+}
+```
 
 
 
